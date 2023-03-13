@@ -1,0 +1,50 @@
+package mypack4;
+
+import java.util.*;
+
+
+
+public class Demo5 {
+
+	
+	public static void main(String[] args) {
+		
+		int array[]= {1,2,3,4,5};
+		int key = 0;
+		
+		Scanner sc=new Scanner (System.in);
+		
+		
+		
+		
+		for(int i=0;i<array.length;i++) {
+			
+			
+			System.out.println("enter the index : ");
+			key=sc.nextInt();
+
+		
+		
+		try {
+			int value=array[key];
+			System.out.println("the value at index "+key+" is "+value);
+		    break;
+			
+			
+		}
+		
+		
+		catch(Exception e) {
+			
+			System.out.println("invalid index please  wait for 10sec ");
+			System.out.println(e);
+			
+			
+		}
+		}
+		
+		
+		
+		sc.close();
+	}
+}

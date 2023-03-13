@@ -1,0 +1,64 @@
+package mypack4;
+
+import java.util.*;
+public class duplicate {
+
+
+	public static boolean duplicate(int array[],int n) {
+		
+		
+		
+	for(int i=0;i<=n-1;i++) {
+			
+			for(int j=1;j<=n-1;j++) {
+				
+				if(array[i]==array[i+1]) {
+					
+					System.out.println("duplicate");
+					return true;
+					
+				}
+				
+			}
+			
+			
+		}
+		System.out.println("not duplicate");
+		return false;
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n;
+		
+		System.out.println("enter the size of array");
+		n=sc.nextInt();
+		int array[]=new int [n];
+		
+		System.out.println("enter elements: ");
+		for(int i=0;i<=n-1;i++) {
+			
+			array[i]=sc.nextInt();
+			
+			
+		}
+		
+		System.out.println("the elements are : ");
+for(int i=0;i<=n-1;i++) {
+			
+	System.out.println(array[i]);
+			
+			
+			
+		}
+
+duplicate(array,n);
+		
+				
+				sc.close();
+		
+	}
+}
+

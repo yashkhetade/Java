@@ -1,0 +1,118 @@
+package mypack;
+
+
+
+public class linkedlistfinal {
+	
+	
+	class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	public static int size;
+	
+	public void addfirst(int data) {
+		
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=null;
+			return ;
+			
+		}
+		
+		n1.next=head;
+		head=n1;
+		
+	}
+	
+public void addlast(int data) {
+		
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=null;
+			return ;
+			
+		}
+		
+		tail.next=n1;
+		tail=n1;
+		
+	}
+
+public int addany(int index,int data) {
+	
+	
+	
+	Node n1=new Node(data);
+	size++;
+	
+	Node temp=head;
+	int i=0;
+	
+	while(i<index-1) {
+		
+		temp=temp.next;
+		i++;
+		
+		
+	}
+	
+	return i;
+	
+}
+
+
+	
+	public void print() {
+		
+		
+		Node temp=head;
+		
+		while(temp!=null) {
+			
+			System.out.println(temp.data);
+			temp=temp.next;
+			
+			
+		}
+		
+		System.out.println();
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+		linkedlistfinal obj=new linkedlistfinal();
+		
+		obj.addfirst(4);
+		obj.addfirst(5);
+		obj.addfirst(6);
+		obj.addany(1, 55);
+		obj.print();
+		
+		
+	}
+}

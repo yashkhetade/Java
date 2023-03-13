@@ -1,0 +1,36 @@
+package mypack4;
+
+
+
+class Superclass{
+	
+	
+	
+}
+
+class Subclass1{
+	
+	
+	
+}
+
+class Subclass2{
+	
+	
+	
+	
+}
+
+
+
+public class OOP1 {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}
+
+
+

@@ -1,0 +1,49 @@
+package mypack4;
+
+
+class Animal{
+	
+	void show() {
+		System.out.println("i am parent class method ");
+		
+	}
+	
+}
+
+
+class dog extends Animal{
+	
+	void display() {
+		System.out.println("i am dog ");
+		
+	}
+}
+
+class cat extends Animal{
+	
+	void display() {
+		System.out.println("i am cat ");
+		
+	}
+}
+
+
+
+
+
+public class Day1 {
+
+	
+	public static void main(String[] args) {
+		
+		cat obj=new cat();
+		obj.display();
+		
+		obj.show();
+		dog obj2=new dog();
+		obj2.display();
+		obj2.show();
+		
+		
+	}
+}

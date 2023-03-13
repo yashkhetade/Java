@@ -1,0 +1,44 @@
+package mypack;
+import java.util.*;
+
+public class Recursion1 {
+	
+	public static int factorial(int n) {
+		
+		if(n<=1) {
+			
+			return 1;
+		}
+		
+		return n*factorial(n-1);
+		
+	}
+
+	public static int power(int x,int n){
+		
+		if(n==0) {
+			
+			return 1;
+		}
+		
+		return x*power(x,n-1);
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int x,n;
+		
+		System.out.println("enter the value of base : ");
+		x=sc.nextInt();
+		
+		System.out.println("enter the value of power : ");
+		n=sc.nextInt();
+		
+		
+		System.out.println("result : "+power(n));
+		
+		sc.close();
+	}
+}

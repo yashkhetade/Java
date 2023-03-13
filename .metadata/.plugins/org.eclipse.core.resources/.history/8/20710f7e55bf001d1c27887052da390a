@@ -1,0 +1,63 @@
+package mypack4;
+
+import java.util.*;
+
+
+
+public class Demo5 {
+
+	
+	public static void main(String[] args) {
+		
+		int key = 0;
+		
+		Scanner sc=new Scanner (System.in);
+		
+		System.out.println("enter the key: ");
+		key=sc.nextInt();
+		
+		int array[]= {1,2,3,4,5};
+		
+		
+		try {
+			
+			
+			for(int i=0;i<array.length;i++) {
+				
+				
+				
+				System.out.println("enter the key: ");
+				key=sc.nextInt();
+				
+				if(key>array.length) {
+					
+					break;
+				}
+				
+				
+				
+			}
+			
+			
+				
+				
+				
+			}
+			
+			
+		
+		
+		
+		
+		catch(Exception e) {
+			
+			System.out.println("exception has been occured");
+			
+			
+		}
+		
+		
+		
+		sc.close();
+	}
+}

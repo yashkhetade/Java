@@ -1,0 +1,29 @@
+package mypack;
+
+
+
+ class Demo3{
+	
+	Demo3(){
+	
+		System.out.println("default constructor called");
+		
+	}
+	
+	
+}
+
+public class OOP3 {
+
+	
+	public static void main(String[] args) {
+		
+		Demo3 obj=new Demo3 ();
+		
+		
+		
+		
+		
+		
+	}
+}

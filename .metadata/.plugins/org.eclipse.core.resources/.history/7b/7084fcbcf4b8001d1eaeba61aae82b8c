@@ -1,0 +1,45 @@
+package mypack;
+
+
+
+ class Parent{
+	
+	public int id;
+	public String name;
+	 
+	 Parent(){
+		 
+		 System.out.println("constructor with no argument");
+		 
+	 }
+	 
+	 Parent(int id,String name){
+		 this.id=id;
+		 this.name=name;
+		 
+	 }
+	 
+	 void display() {
+		 System.out.println("id="+id+"name="+name);
+		 
+	 }
+	 
+	
+	
+}
+
+public class OOPS2 {
+
+	
+	public static void main(String[] args) {
+		
+		Parent obj=new Parent(23,"yash");
+		
+		obj.display();
+		
+		
+		
+		
+		
+	}
+}

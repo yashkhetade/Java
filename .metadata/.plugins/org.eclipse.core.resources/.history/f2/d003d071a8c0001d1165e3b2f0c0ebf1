@@ -1,0 +1,92 @@
+package mypack;
+
+import java.util.ArrayList;
+
+//Stack is a linear data structure
+//It follows last in first out concept
+
+//while adding element it goes last 
+//while removing element whe get top element
+
+//push,pop,peek
+
+//implicit stack jo program khud banata hai
+//explicit stack jo user banata hai
+
+
+
+
+
+public class Stack1 {
+	
+	static class Stack{
+		
+	static	ArrayList<Integer> list =new ArrayList<Integer>();
+		
+		
+	public static boolean isempty() {
+		
+		return  list.size()==0;
+		
+	}
+	
+	public static void push(int data) {
+		list.add(data);
+		
+	}
+	
+	public static int pop() {
+		
+		if(isempty()==true) {
+			
+			return -1;
+		}
+		int top=list.get(list.size()-1);
+		list.remove(list.size()-1);
+		
+		return top;
+	}
+	
+	
+	
+	public static int peek() {
+		
+		if(isempty()==true) {
+			return -1;
+			
+		}
+		
+		return list.get(list.size()-1);
+		
+		
+	}
+
+	
+		
+	}
+	
+	
+	
+
+
+	public static void main(String[] args) {
+		
+		
+		Stack s1=new Stack();
+		
+		s1.push(8);
+		s1.push(5);
+		s1.push(4);
+		s1.push(6);
+		
+		System.out.println(s1.peek());
+		
+		while(!s1.isempty()) {
+			
+			System.out.println(s1.peek());
+			s1.pop();
+		}
+		
+		
+	}
+}

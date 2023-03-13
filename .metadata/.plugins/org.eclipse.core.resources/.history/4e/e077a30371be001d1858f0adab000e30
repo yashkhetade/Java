@@ -1,0 +1,43 @@
+package mypack2;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class Demo implements MouseListener{
+JFrame f;
+JLabel l;
+Demo(){
+f = new JFrame("Mouse Events");
+f.setSize(300, 300);
+f.setLayout(null);
+f.setVisible(true);
+l = new JLabel("Mouse Events");
+l.setBounds(100, 50, 100, 20);
+f.add(l);
+f.addMouseListener(this);
+}
+public static void main(String [] args) {
+Demo d = new Demo();
+}
+@Override
+public void mouseClicked(MouseEvent e) {
+l.setText("Mouse Clicked");
+}
+@Override
+public void mouseEntered(MouseEvent e) {
+l.setText("Mouse Entered");
+}
+@Override
+public void mouseExited(MouseEvent e) {
+l.setText("Mouse Exited");
+}
+@Override
+public void mousePressed(MouseEvent e) {
+l.setText("Mouse Pressed");
+}
+@Override
+public void mouseReleased(MouseEvent e) {
+l.setText("Mouse Released");
+}
+}
+Prof. S. V.

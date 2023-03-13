@@ -1,0 +1,232 @@
+package mypack;
+
+
+
+public class ll3 {
+	
+	
+public static class Node {
+		
+		int data;
+		
+		Node next;
+		
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	
+	public static int size;
+	//it returns the no of nodes in linkedlist
+	
+	
+	public void addfirst(int data) {
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=n1;
+			return ;
+			
+		}
+		
+		n1.next=head;
+		head=n1;
+		
+		
+		
+	}
+	
+	
+
+	
+	public  void addlast(int data) {
+		
+
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=n1;
+			return;
+			
+		}
+		
+		tail.next=n1;
+		tail=n1;
+	}
+	
+	
+	
+	//naya node
+	//temp,i
+	
+	//loop lagake add
+	//done
+	
+	public void addany(int index,int data) {
+		
+		Node n1=new Node(data);
+		size++;
+		
+	    Node temp=head;
+	    int i=0;
+	    
+	    while(i<index-1) {
+	    	
+	    	temp=temp.next;
+	    	i++;
+	    }
+	    
+	    n1.next=temp.next;
+	    temp.next=n1;
+		
+		
+		
+		
+	}
+	
+	
+	public void print() {
+		
+		Node temp=head;
+		
+		if(head==null) {
+			System.out.println("linked list is empty");
+			return ;
+			
+		}
+		
+		
+		while(temp!=null) {
+			
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+			
+		}
+		
+		System.out.println();
+		
+		
+		
+	}
+	
+	
+	public  int removefirst() {
+		
+		if(size==0) {
+			System.out.println("linked list is empty ");
+			return Integer.MIN_VALUE;
+		}
+		
+		if(size==1) {
+			int value=head.data;
+			head=tail=null;
+			size=0;
+			return value;
+		}
+		
+		int value=head.data;
+		head=head.next;
+		size--;
+		return value;
+		
+	}
+	
+	
+	
+    public int search(int key) {
+		
+		Node temp=head;
+    	int i=0;
+    	
+    	while(temp!=null) {
+    		
+    		if(temp.data==key) {
+    			
+    			return i;
+    		}
+    		temp=temp.next;
+    		i++;
+    	}
+		
+		return -1;
+	}
+	
+    
+    public void reverse() {
+    	
+    	//3 variable 4 step
+    	
+    	Node prev=null;
+    	Node current=tail=head;
+    	Node next;
+    	
+    	while(current!=null) {
+    		next=current.next;
+    		current.next=prev;
+    		prev=current;
+    		current=next;
+    		
+    	}
+    	head=prev;
+    	
+    }
+    
+    
+    
+    
+    
+	
+
+	public static void main(String[] args) {
+		
+		ll3 obj=new ll3();
+		
+		obj.print();
+		
+		obj.addfirst(13);
+		obj.addfirst(12);
+		obj.addfirst(14);
+		obj.addfirst(15);
+		
+		
+		
+		obj.print();
+		
+		obj.addany(1, 88);
+//		
+//		obj.reverse();
+		obj.print();
+		
+		
+		
+		
+		
+		
+//		System.out.println("size is "+obj.size);
+//		
+//		
+//		
+//		System.out.println("search result : "+obj.search(15));
+		
+		
+	
+		
+		
+		
+		
+		
+	}
+}

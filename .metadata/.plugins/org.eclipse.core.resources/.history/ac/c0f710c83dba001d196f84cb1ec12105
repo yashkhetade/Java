@@ -1,0 +1,50 @@
+package mypack4;
+
+class Student{
+	
+	int adminno;
+	String sname;
+	float eng, math, science;
+	
+	
+	public void Takedata(int a,String name,double d,double e,double f) {
+		
+		adminno=a;
+		sname=name;
+		d=this.eng;
+		e=this.math;
+		f=this.science;
+		
+		
+	}
+	
+	public float total() {
+		
+		System.out.println("Total marks are : ");
+		float c=eng+ math+ science;
+		return c;
+	}
+	
+	public void show() {
+		
+		System.out.println("admin no is "+adminno);
+		System.out.println("admin name is "+sname);
+		System.out.println("marks are : "+"eng= "+eng+"math= "+math+"science= "+science);
+		
+	
+		
+	}
+	
+}
+
+public class Assignment1 {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		s1.Takedata(23, "Yash", 70.5, 80.5, 86.6);
+		s1.show();
+		System.out.println(s1.total());
+	}
+	
+}

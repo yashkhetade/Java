@@ -1,0 +1,30 @@
+package mypack;
+
+
+class Parent{
+	
+// private String password;
+ private int id=55;
+ 
+ public int getId() {
+	 return this.id;
+	 
+ }
+	
+ public void setId(int id) {
+	 this.id=id;
+	 
+ }
+	
+}
+
+
+public class OOPS1 {
+	
+	
+	public static void main(String[] args) {
+		Parent p=new Parent();
+		System.out.println(p.getId());
+		
+	}
+}

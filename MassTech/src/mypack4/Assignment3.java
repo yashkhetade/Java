@@ -1,0 +1,86 @@
+package mypack4;
+import java.util.*;
+
+class Test{
+	
+	int testcode;
+	String description;
+	int nocandidates;
+	int centerread;
+//	float total;
+	
+	
+	public void Readdata() {
+		
+		Scanner sc=new Scanner (System.in);
+		
+		
+
+	
+
+		
+	System.out.println(" enter testcode : ");
+	
+	this.testcode=sc.nextInt();
+	
+	
+	System.out.println(" description : ");
+	this.description=sc.next();
+	
+	
+
+
+
+	
+	System.out.println(" enter no of candidates : ");
+	this.nocandidates=sc.nextInt();
+	
+	System.out.println("no of centers available : ");
+	this.centerread=sc.nextInt();
+	
+	
+	
+	
+	
+		
+	
+	sc.close();
+		
+		
+	}
+	
+	public int calcenter() {
+		
+		System.out.println("no of centers required are  : ");
+		int nocenter=nocandidates/(100+1);
+		
+		return nocenter;
+	}
+	
+	public void display() {
+		System.out.println(" description : "+description);
+		
+		System.out.println("testcode :"+testcode);
+
+		System.out.println(" nocandidates : "+nocandidates);
+		System.out.println(" centerread : "+centerread);
+		
+		
+		
+	
+		
+	}
+	
+}
+
+public class Assignment3 {
+
+	public static void main(String[] args) {
+		
+		Test T1=new Test();
+		T1.Readdata();
+		T1.display();
+		System.out.println(T1.calcenter());
+	}
+	
+}

@@ -1,0 +1,104 @@
+package mypack;
+
+
+
+
+
+public class ll3 {
+	
+	
+public static 	class Node {
+		
+		int data;
+		
+		Node next;
+		
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	
+	
+	public static void addfirst(int data) {
+		
+		Node n1=new Node(data);
+		
+		if(head==null) {
+			head=tail=n1;
+			
+		}
+		
+		n1.next=head;
+		head=n1;
+		
+		
+		
+	}
+	
+	public static void addlast(int data) {
+		
+
+		Node n1=new Node(data);
+		
+		if(head==null) {
+			head=tail=n1;
+			
+		}
+		
+		tail.next=n1;
+		n1=tail;
+		
+		
+		
+		
+	}
+	
+	public static void print() {
+		
+		
+		
+		
+		Node temp=head;
+		
+		if(head==null) {
+			
+			System.out.println("linked list is empty ");
+		}
+			
+		while(temp!=null) {
+			
+			System.out.println(temp.data+" ");
+			temp=temp.next;
+			
+		}
+		
+		System.out.println();
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+		ll3 obj=new ll3();
+		
+		obj.addfirst(12);
+		obj.addfirst(13);
+		obj.addfirst(14);
+		obj.addfirst(15);
+		
+		
+	}
+}

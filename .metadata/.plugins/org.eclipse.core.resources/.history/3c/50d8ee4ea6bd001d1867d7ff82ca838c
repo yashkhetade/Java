@@ -1,0 +1,179 @@
+package mypack;
+
+
+
+public class ll3 {
+	
+	
+public static class Node {
+		
+		int data;
+		
+		Node next;
+		
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	
+	public static int size;
+	//it returns the no of nodes in linkedlist
+	
+	
+	public void addfirst(int data) {
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=n1;
+			return ;
+			
+		}
+		
+		n1.next=head;
+		head=n1;
+		
+		
+		
+	}
+	
+	
+
+	
+	public  void addlast(int data) {
+		
+
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			head=tail=n1;
+			return;
+			
+		}
+		
+		tail.next=n1;
+		tail=n1;
+	}
+	
+	
+	
+	
+	public void addany(int index,int data) {
+		
+		Node n1=new Node(data);
+		
+	    Node temp=head;
+	    int i=0;
+	    
+	    while(i<index-1) {
+	    	
+	    	temp=temp.next;
+	    	i++;
+	    }
+	    
+	    n1.next=temp.next;
+	    temp.next=n1;
+		
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	public void print() {
+		
+		Node temp=head;
+		
+		if(head==null) {
+			System.out.println("linked list is empty");
+			return ;
+			
+		}
+		
+		
+		while(temp!=null) {
+			
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+			
+		}
+		
+		System.out.println();
+		
+		
+		
+	}
+	
+	
+	public static int removefirst() {
+		
+		if(size==0) {
+			System.out.println("linked list is empty ");
+			return Integer.MIN_VALUE;
+		}
+		
+		if(size==1) {
+			int val=head.data;
+			head=tail=null;
+			size=0;
+			return val;
+		}
+		
+		int value=head.data;
+		head=head.next;
+		size--;
+		return value;
+		
+	}
+	
+    public static void removelast() {
+		
+		
+		
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		ll3 obj=new ll3();
+		
+		obj.print();
+		
+		obj.addfirst(13);
+		obj.addfirst(12);
+		obj.addlast(14);
+		obj.addlast(15);
+		
+		
+		
+		obj.print();
+		
+		
+		
+		System.out.println("size is "+obj.size);
+		
+		obj.removefirst();
+		obj.print();
+		
+	}
+}

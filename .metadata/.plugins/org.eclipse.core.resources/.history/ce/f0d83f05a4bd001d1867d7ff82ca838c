@@ -1,0 +1,158 @@
+package mypack;
+
+
+
+public class ll3 {
+	
+	
+public static class Node {
+		
+		int data;
+		
+		Node next;
+		
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	public static Node head;
+	public static Node tail;
+	
+	
+	
+	public void addfirst(int data) {
+		
+		Node n1=new Node(data);
+		
+		if(head==null) {
+			head=tail=n1;
+			return ;
+			
+		}
+		
+		n1.next=head;
+		head=n1;
+		
+		
+		
+	}
+	
+	
+	public void addany(int index,int data) {
+		
+		Node n1=new Node(data);
+		
+	    Node temp=head;
+	    int i=0;
+	    
+	    while(i<index-1) {
+	    	
+	    	temp=temp.next;
+	    	i++;
+	    }
+	    
+	    n1.next=temp.next;
+	    temp.next=n1;
+		
+		
+		
+		
+	}
+	
+	public  void addlast(int data) {
+		
+
+		Node n1=new Node(data);
+		
+		if(head==null) {
+			head=tail=n1;
+			return;
+			
+		}
+		
+		tail.next=n1;
+		n1=tail;
+		
+		
+		
+		
+	}
+	
+	public  void print() {
+		
+		
+		
+		
+		Node temp=head;
+		
+		if(head==null) {
+			
+			System.out.println("linked list is empty ");
+			return ;
+		}
+			
+		while(temp!=null) {
+			
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+			
+		}
+		
+		System.out.println();
+		
+		
+		
+		
+		
+		
+	}
+	
+	public void print2() {
+		
+
+		
+		Node temp=head;
+		
+		if(head==null) {
+			System.out.println("linked list is empty");
+			return ;
+			
+		}
+		
+		
+		while(temp!=null) {
+			
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+			
+		}
+		
+		System.out.println();
+		
+		
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		ll3 obj=new ll3();
+		
+		obj.print2();
+		obj.addfirst(12);
+		obj.addfirst(13);
+		obj.addany(1, 55);
+		
+		obj.print2();
+		
+		
+	}
+}

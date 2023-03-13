@@ -1,0 +1,40 @@
+package mypack4;
+
+import java.util.*;
+
+
+
+public class Arraylist1 {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int n;
+		System.out.println("enter the value of n : ");
+		n=sc.nextInt();
+		
+		int array[]=new int[n];
+		
+		System.out.println("enter the elements in array : ");
+		
+		for(int i=0;i<=n-1;i++) {
+			array[i]=sc.nextInt();
+			
+		}
+		
+		
+        System.out.println(" the elements in array are : ");
+		
+		for(int i=0;i<=n-1;i++) {
+			System.out.println(array[i]+" ");
+			
+		}
+		
+		
+		
+		sc.close();
+	}
+
+}

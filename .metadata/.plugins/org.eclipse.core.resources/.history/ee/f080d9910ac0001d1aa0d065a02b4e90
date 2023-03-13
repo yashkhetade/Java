@@ -1,0 +1,51 @@
+package mypack;
+
+import java.util.*;
+
+
+public class Stack5 {
+	
+	public static boolean checkpalindrome(String str) {
+		
+		int n=str.length();
+		for(int i=0;i<n/2;i++) {
+			
+			if(str.charAt(i)!=str.charAt(n-i-1)) {
+				return false;
+				
+			}
+			
+			
+		}
+		return true;
+		
+		
+		
+	}
+	
+	public static int length(String str) {
+		
+		int count=0;
+		for(int i=0;i<str.toCharArray().length;i++) {
+			count=count+1;
+			
+		}
+		return count;
+		
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+		String str="noon";
+		
+		System.out.println(length(str));
+		
+		System.out.println("palindrome or not : "+checkpalindrome(str));
+		
+		
+	}
+}

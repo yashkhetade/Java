@@ -1,0 +1,80 @@
+package mypack2;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+
+
+
+public class Jdemo implements ActionListener{
+	
+	    Frame f;
+	    Label l;
+	    Button b;
+public Jdemo(){
+	
+	l=new Label("default");
+		f=new Frame("Mouse Events");
+		
+		
+		b=new Button("click me");
+		
+		b.setBackground(Color.cyan);
+		b.setForeground(Color.blue);
+		b.addActionListener(this);
+		
+		
+		
+		
+		
+		
+		
+		
+		f.add(l);
+		f.add(b);
+		
+		
+		
+		
+		f.setLayout(new FlowLayout());
+		
+		f.addWindowListener(new WindowAdapter(){
+		public void windowClosing (WindowEvent e) {
+			f.dispose();
+			
+		}
+		
+		});
+		
+		
+		f.setSize(500,500);
+		f.setVisible(true);
+		
+		
+		
+	}
+
+
+
+
+public void actionPerformed(ActionEvent e) {
+	
+	l.setText("button clicked");
+	
+}
+
+
+
+
+public static void main(String[] args) {
+	
+	Jdemo obj=new Jdemo();
+	
+	
+	
+	
+}
+
+	
+}

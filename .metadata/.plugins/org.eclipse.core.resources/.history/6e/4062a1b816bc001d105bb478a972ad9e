@@ -1,0 +1,99 @@
+package mypack;
+import java.util.*;
+
+//PIVOT AND PARTITION
+
+//pivot 
+//koi bhi ek element jiske aaju baju smmaller aur greater elements ho
+
+
+
+public class Quicksortp {
+	
+	public static int partition(int array[],int start,int end) {
+		
+	int pivot=array[end] ;
+	int i=start-1;
+	
+	
+	for(int j=start;j<end;j++) {
+		if(array[j]<=pivot) {
+			
+			i++;
+			int temp=array[i];
+			array[i]=array[j];
+			array[j]=temp;
+			
+			
+		}
+		
+		
+	}
+	
+	i++;
+	int temp=pivot;
+	array[end]=array[i];
+	array[i]=temp;
+	
+	return i;
+		
+		
+	}
+	
+public static void quicksort(int array[],int start,int end) {
+	
+	if(start>=end) {
+		
+		return ;
+		
+	}
+	
+	
+	int pivoti=partition(array,start,end);
+	
+	quicksort(array,start,pivoti-1);
+	quicksort(array,pivoti+1,end);
+
+	
+	
+	
+}
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int n;
+		
+		System.out.println("enter the size of array : ");
+		n=sc.nextInt();
+		int array[]=new int [n];
+		
+		
+		System.out.println("enter the elements of array : ");
+		
+		for(int i=0;i<=n-1;i++) {
+			array[i]=sc.nextInt();
+			
+		}
+		
+		System.out.println("the elements in array are : ");
+		
+		for(int i=0;i<=n-1;i++) {
+			System.out.println(array[i]+" ");
+			
+		}
+		
+		quicksort(array,0,n-1);
+		
+System.out.println("the elements in array  after sorting are : ");
+		
+		for(int i=0;i<=n-1;i++) {
+			System.out.print(array[i]+" ");
+			
+		}
+		
+		sc.close();
+		
+	}
+}

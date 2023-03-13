@@ -1,0 +1,77 @@
+package mypack;
+
+
+//linked list is a collection of nodes 
+//each not carry data of current node and address of next node
+
+//it is linear data structure
+
+//non linear-tree and graph
+
+
+
+public class Linkedlist1 {
+	
+	
+public static class Node{
+	
+	int data;
+	
+	Node next;
+	
+	public Node(int data) {
+		
+		this.data=data;
+		this.next=null;
+		
+	}
+	
+	
+	
+}
+
+public static Node Head;
+public static Node Tail;
+
+
+////////////////////////////////////////
+
+public static void add() {
+	
+	
+}
+
+public static void remove() {
+	
+	
+}
+
+public static void print() {
+	
+	
+}
+
+public static void search() {
+	
+	
+}
+
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Linkedlist1 l1=new Linkedlist1();
+		
+		l1.Head=new Node(12);
+		
+		l1.Head.next=new Node(4);
+		
+		
+		
+		
+	}
+	
+	
+	
+}

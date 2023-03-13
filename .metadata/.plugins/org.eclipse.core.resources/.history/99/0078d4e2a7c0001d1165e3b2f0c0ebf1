@@ -1,0 +1,88 @@
+package mypack;
+//creating stack using linkedlist
+
+
+public class Stack2 {
+
+	static class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+		
+		
+	}
+	
+	static class stack{
+		
+		static Node head;
+		
+		public static boolean isempty() {
+			
+			return head==null; 
+		}
+		
+		public static void push(int data) {
+			Node n1=new Node(data);
+			if(isempty()==true) {
+				
+				head=n1;
+				return ;
+			}
+			n1.next=head;
+			head=n1;
+			
+		}
+		
+		public static int pop() {
+			
+			if(isempty()) {
+				return -1 ;
+			}
+		   int top=head.data;
+		   head=head.next;
+		   return top;
+			
+		}
+		
+		
+		public static int peek() {
+	
+		 return head.data;
+			
+		}
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		stack s1=new stack();
+		s1.push(4);
+		s1.push(8);
+		s1.push(6);
+		s1.push(4);
+		s1.push(8);
+		
+		
+		
+		
+		while(!s1.isempty()) {
+			
+			System.out.println(s1.peek());
+			s1.pop();
+		}
+		
+		
+		
+		
+	}
+	
+	
+}

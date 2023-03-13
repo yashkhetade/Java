@@ -1,0 +1,16 @@
+package mypack;
+
+import java.util.*;
+
+
+
+public class ArrayList {
+
+	public static void main(String[] args) {
+		
+		ArrayListExp<Integer> a=new ArrayListExp <Integer>();
+		 
+		
+		
+	}
+}

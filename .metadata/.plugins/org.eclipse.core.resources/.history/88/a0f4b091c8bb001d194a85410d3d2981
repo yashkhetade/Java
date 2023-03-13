@@ -1,0 +1,89 @@
+package mypack;
+import java.util.*;
+
+public class Recursion1 {
+	
+	public static int factorial(int n) {
+		
+		if(n<=1) {
+			
+			return 1;
+		}
+		
+		return n*factorial(n-1);
+		
+	}
+
+	public static int power(int x,int n){
+		
+		if(n==0) {
+			
+			return 1;
+		}
+		
+		return x*power(x,n-1);
+	}
+	
+	public static int fibonacci(int n){
+		
+		if(n<=1) {
+			
+			return n;
+		}
+		
+		return fibonacci(n-1)+fibonacci(n-2);
+	}
+	
+	
+	public static void reverse(int n) {
+		
+		
+		int reverse=0;
+		while(n!=0) {
+			int lastdigit=n%10;
+			
+			reverse=reverse*10+lastdigit;
+			
+			n=n/10;
+		}
+		
+		System.out.println(reverse);
+		
+		
+		
+	}
+	
+	public static int  reversen(int n) {
+		
+		if(n<=1) {
+			return 1;
+			
+		}
+		
+		return reversen(n-1);
+		
+		
+		
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int n;
+		
+//		System.out.println("enter the value of base : ");
+//		x=sc.nextInt();
+//		
+		System.out.println("enter the value of n : ");
+		n=sc.nextInt();
+		
+		System.out.println(reversen(n));
+		
+//		System.out.println("result : "+fibonacci(n));
+		
+		sc.close();
+	}
+}

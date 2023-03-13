@@ -1,0 +1,94 @@
+package mypack;
+import java.util.*;
+
+public class Array6 {
+	//linearesearch
+//array is a object in java which store data in contiguous manner
+	
+public static int sum(int array[],int n) {
+	int sum=0;
+	for(int i=0;i<=n-1;i++) {
+		sum=sum+array[i];
+		
+	}
+	
+	return sum;
+}
+
+public static int minelement(int array[],int n) {
+	int small=array[0];
+	for(int i=0;i<=n-1;i++) {
+		if(small>array[i]) {
+			small=array[i];
+			
+		}
+		
+	}
+	
+	return small;
+}
+
+public static int maxelement(int array[],int n) {
+	int large=array[0];
+	for(int i=0;i<=n-1;i++) {
+		if(large<array[i]) {
+			large=array[i];
+			
+		}
+		
+	}
+	
+	return large;
+}
+
+public static boolean sortedarray(int array[],int n) {
+	
+	for(int i=0;i<=n-1;i++) {
+		if(array[i]<=array[i+1]) {
+			
+			System.out.println("sorted ");
+			return true;
+			
+		}
+	
+		
+		
+	}
+	return false;
+	
+	
+}
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int n;
+		System.out.println("enter the size of array");
+		n=sc.nextInt();
+		
+		
+		
+		int array[]=new int[n];
+		System.out.println("enter the elements in array");
+		for(int i=0;i<=n-1;i++) {
+			array[i]=sc.nextInt();
+			
+			
+		}
+		
+		System.out.println(" the elements in array arre : ");
+		for(int i=0;i<=n-1;i++) {
+			System.out.println(array[i]);
+			
+			
+		}
+		
+		
+		System.out.println(sortedarray(array,n));
+//		System.out.println("The max element is : "+maxelement(array,n));
+//		System.out.println("The min element is : "+minelement(array,n));
+//		System.out.println("The sum of elements is : "+sum(array,n));
+		
+		sc.close();
+	}
+}

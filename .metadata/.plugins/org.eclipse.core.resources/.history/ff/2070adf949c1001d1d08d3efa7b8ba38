@@ -1,0 +1,21 @@
+package mypack;
+
+//it lis a linear data structure 
+//it follows last in first out concept
+
+
+//w
+
+public static class Queue1 {
+	
+	
+	
+	
+	
+	
+ public static void main(String[] args) {
+	
+}
+ 
+ 
+}

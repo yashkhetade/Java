@@ -1,0 +1,52 @@
+package mypack;
+
+import java.util.*;
+
+
+public class Stack5 {
+
+	
+//	public static void reverse(Stack<String>st ) {
+//		
+//		int start=0;
+//		int end=
+//		
+//		
+//	}
+	
+public static void reverse(String st ) {
+		
+
+   for(int i=st.length();i>=0;i--) {
+	   
+	   System.out.println(st);
+   }
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		
+		String str="yash";
+		
+		reverse(str);
+		
+		System.out.println("after reversing "+str);
+//		Stack <String> st=new Stack<String>();
+//		
+//		st.push("yash");
+//		reverse(st);
+//		
+//		System.out.println("printing stack : ");
+//		while(!st.isEmpty()) {
+//			
+//			System.out.println(st.peek());
+//			st.pop();
+//		}
+		
+		
+	}
+}

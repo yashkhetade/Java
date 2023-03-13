@@ -1,0 +1,105 @@
+package mypack4;
+import java.util.*;
+
+public class Arraysop {
+	
+	public static void checksorted(int array[],int n) {
+		
+		
+		for(int i=0;i<n;i++) {
+			
+			for(int j=0;j<n;j++) {
+				int temp=array[i];
+				array[i]=array[j];
+				array[j]=temp;
+				
+				
+			}
+			
+		}
+		
+		
+		
+	}
+
+	public static void largestelement(int array[],int n) {
+		
+		
+		  int large=array[0];
+	        for(int i=0;i<=5-1;i++) {
+				
+	     			if(large<array[i]) {
+	     				large=array[i];
+	     				
+	     			}
+	     		}
+		
+	        System.out.println("largest element is"+large);
+	}
+	
+	
+	public static void smallestelement(int array[],int n) {
+		
+		
+		  int small=array[0];
+	        for(int i=0;i<=5-1;i++) {
+				
+	     			if(small>array[i]) {
+	     				small=array[i];
+	     				
+	     			}
+	     		}
+		
+	        System.out.println("smallest element is"+small);
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		int array[]=new int[5];
+		
+		
+		
+		int n=array.length;
+		System.out.println("enter the elements in array");
+		for(int i=0;i<=5-1;i++) {
+			array[i]=sc.nextInt();
+			
+		}
+		
+		System.out.println("the elements in array are : ");
+		
+		
+        for(int i=0;i<=5-1;i++) {
+			
+			System.out.println(array[i]);
+		}
+	
+        
+    
+        largestelement(array,5);
+        smallestelement(array,5);
+        
+        checksorted(array,5);
+        
+System.out.println("the elements in array after sorting are : ");
+		
+		
+        for(int i=0;i<=5-1;i++) {
+			
+			System.out.println(array[i]);
+		}
+        
+        
+        
+	
+	sc.close();
+	
+	
+	}
+}
+	
+	
+

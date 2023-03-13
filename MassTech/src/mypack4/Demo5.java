@@ -1,0 +1,38 @@
+package mypack4;
+
+import java.util.Scanner;
+
+public class Demo5 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = {1, 2, 3, 4, 5};
+        int count = 0;
+        
+        while (count < 5) {
+            System.out.print("Enter the index: ");
+            try {
+                int index = sc.nextInt();
+                System.out.println("Element at index " + index + " is " + arr[index]);
+                break; // if index is valid, exit the loop
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Invalid index!");
+                count++;
+            }
+        
+        
+       
+        if (count == 5) {
+            System.out.println("Wait for 10 seconds");
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+        
+    }
+
+}
+}

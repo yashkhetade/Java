@@ -1,0 +1,64 @@
+package mypack;
+
+class Complex45{
+	
+	int  r,i;
+	public Complex45(){
+		
+		
+	}
+
+	public Complex45(int r,int i){
+		
+		this.r=r;
+		this.i=i;
+		
+	}
+
+	
+	
+	public void show() {
+		
+		System.out.println(r+ "+" + "i" +i);
+	}
+	
+	public void add(Complex45 c1,Complex45 c2) {
+		
+	
+		r=c1.r+c2.r;
+		i=c1.i+c2.i;
+		
+		
+		
+	}
+	
+}
+
+
+
+public class Complexop {
+
+	public static void main(String[] args) {
+		
+		
+		Complex45 c1=new Complex(2,3);
+		c1.show();
+		
+		Complex45 c2=new Complex(4,5);
+		c2.show();
+		
+		Complex45 c3=new Complex();
+		
+		c3.add(c1,c2);
+		
+		System.out.println("after addition");
+		c3.show();
+		
+		
+		
+		
+	}
+	
+	
+	
+}

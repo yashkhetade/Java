@@ -1,0 +1,107 @@
+package mypack;
+
+import java.util.Scanner;
+
+
+
+public class Backtrack {
+	
+	public static void subarray(int array[],int n) {
+		
+		System.out.println("subarrays  are : ");
+		
+		int count=0;
+		for(int i=0;i<=n-1;i++) {
+			int start=i;
+			
+			
+			for(int j=i;j<=n-1;j++) {
+				
+				int end=j;
+				
+				for(int k=start;k<=end;k++) {
+					
+					System.out.println(array[k]);
+					
+				}
+				
+				count++;
+				System.out.println();
+				
+			}
+			System.out.println();
+			
+		}
+		System.out.println("no of subarrays are : "+count);
+		
+		
+	}
+	
+	public static void subsets(String str) {
+		
+		int n=str.length();
+		System.out.println("subsets  are : ");
+		
+		int count=0;
+		for(int i=0;i<n;i++) {
+			int start=i;
+			
+			
+			for(int j=i;j<n;j++) {
+				
+				int end=j;
+				
+				for(int k=start;k<=end;k++) {
+					
+					System.out.println(str.charAt(k));
+					
+				}
+				
+				count++;
+				System.out.println();
+				
+			}
+			System.out.println();
+			
+		}
+		System.out.println("no of subarrays are : "+count);
+		
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+//		Scanner sc=new Scanner(System.in);
+//		int n;
+//		System.out.println("enter the size of array");
+//		n=sc.nextInt();
+//		
+//		
+//		
+//		int array[]=new int[n];
+//		System.out.println("enter the elements in array");
+//		for(int i=0;i<=n-1;i++) {
+//			array[i]=sc.nextInt();
+//			
+//			
+//		}
+//		
+//		System.out.println(" the elements in array arre : ");
+//		for(int i=0;i<=n-1;i++) {
+//			System.out.println(array[i]);
+//			
+//			
+//		}
+		
+		String str="abc";
+       
+		subsets(str);
+		
+		
+		
+		
+//		sc.close();
+	}
+}

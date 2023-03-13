@@ -1,0 +1,26 @@
+package mypack;
+
+import java.util.*;
+
+
+
+public class ArrayListExp {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> a=new ArrayList<Integer>();
+		 
+		
+		a.add(12);
+		a.add(24);
+		
+		a.add(15);
+		
+		a.add(18);
+		
+		System.out.println(a);
+		
+		
+		
+	}
+}

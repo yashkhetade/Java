@@ -1,0 +1,147 @@
+package mypack;
+public class Queue2{
+
+class Node{
+	int data;
+	
+	Node next;
+	
+	Node(int data){
+		this.data=data;
+		this.next=null;
+		
+	}
+	
+	
+}
+	public boolean isempty() {
+		 if(head==null) {
+			 return true;
+		 }
+		 else {
+			 return false;
+			 
+		 }
+	 
+	}
+	
+	
+	public void addf(int data) {
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			
+			head=tail=n1;
+			return ;
+		}
+		n1.next=head;
+		head=n1;
+		
+		
+	}
+	
+	public void addlast(int data) {
+		
+		Node n1=new Node(data);
+		size++;
+		
+		if(head==null) {
+			
+			head=tail=n1;
+			return ;
+		}
+		tail.next=n1;
+		tail=n1;
+		
+		
+	}
+	
+	public int remove() {
+		
+		if(size==0) {
+			
+			System.out.println("linked list is empty ");
+			return -1;
+		}
+				
+		if(size==1) {
+			
+			int top=head.data;
+			head=tail=null;
+			size=0;
+			return top;
+			
+		}
+		
+		int top=head.data;
+		head=head.next;
+		size--;
+		return top;
+		
+		
+	}
+	
+	public void addany(int index,int data) {
+		
+		Node n1=new Node(data);
+		
+		Node temp=head;
+		
+		int i=0;
+		
+		while(i<index-1) {
+			
+			temp=temp.next;
+			i++;
+			
+		}
+		
+		n1.next=temp.next;
+		temp.next=n1;
+		
+		
+		
+	}
+	
+	
+	public void print() {
+		
+		Node temp=head;
+		while (temp!=null) {
+			
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+	}
+	
+	
+	
+	public static Node head;
+	public static Node tail;
+	public static int size;
+}
+
+
+
+
+
+
+	
+	
+
+
+	
+	
+	public static void main(String[] args) {
+		
+	    Queue2 obj=new Queue2();
+		
+		System.out.println(obj.isempty());
+		System.out.println("size of linkedlist is "+);
+		
+	}
+	
+	
+}

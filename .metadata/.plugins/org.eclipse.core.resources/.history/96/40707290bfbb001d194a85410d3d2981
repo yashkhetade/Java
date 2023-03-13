@@ -1,0 +1,41 @@
+package mypack;
+import java.util.*;
+
+
+public class Stringsp {
+	public static void getssubarray(int array[],int n) {
+
+		
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+
+    int n;
+    
+    System.out.println("enter the value of n : ");
+    n=sc.nextInt();
+    int array[]=new int [n];
+    
+    System.out.print("enter the elements in array : "+" ");
+    
+    for(int i=0;i<=n-1;i++) {
+    	array[i]=sc.nextInt();
+    	
+    }
+    
+  System.out.println(" the elements in array are : ");
+    
+    for(int i=0;i<=n-1;i++) {
+    	System.out.print( array[i]+" ");
+    	
+    }
+
+
+	}
+	
+	
+}
